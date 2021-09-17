@@ -28,6 +28,11 @@ h6{
     font-weight: 700;
 }
 
+ul,
+li{
+    list-style: none;
+}
+
 main{
     background-color: #f5f5f5;
 }
@@ -72,7 +77,7 @@ main{
     height: auto;
     margin-right: 10px;
 }
-.logo__text {
+.logo__text span{
     display: block;
     font-style: 15px;
     line-height: 18px;
@@ -97,8 +102,7 @@ main{
 
 
 .btn__login,
-.bta__cart {
-    background-image: url(../img/pipl.svg);
+.btn__cart {
     padding: 10px 16px 10px 36px;
     background-repeat: no-repeat;
     background-position: left 11px center;
@@ -113,7 +117,7 @@ main{
 }
 
 
-.bta__cart {
+.btn__cart {
     background-image: url(../img/Vector.svg);
     border: 1px solid #d9d9d9;
     box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.0015);
@@ -174,18 +178,22 @@ main{
     padding: 5px 12px 5px 32px;
 }
 
-.beer__items {
+.beer-items {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    gap: 20px;
 }
-.beer__item {
+.beer-item {
     background: #FFFFFF;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
     border-radius: 7px;
-    max-width: 385px;
+    max-width: 384px;
     width: 100%;
-    margin-bottom: 20px;
+    transition: all .3s;
+}
+
+.beer-item:hover{
+    transform: translateY(-30px);
 }
 
 .beer-item__img {
@@ -266,4 +274,90 @@ main{
     top: -5px;
     left: -2px;
     border-radius: 50%;
+}
+
+.footer {
+    padding: 60px 0;
+
+}
+
+.footer__inner {
+    display: flex;
+    align-items: center;
+}
+.nav__list {
+    display: flex;
+}
+.nav__item {
+    margin-right: 15px;
+}
+
+.nav__item:last-child {
+    margin-right: 0px;
+}
+
+.nav{
+    margin-left: 35px;
+}
+.nav__item-link {
+    font-style: 18px;
+    color: #595959;
+}
+.social {
+    display: flex;
+    margin-left: auto;
+}
+.social__link {
+    margin-right: 20px;
+}
+
+.social__link:last-child {
+    margin-right: 0px;
+}
+
+
+.product {
+    padding-bottom: 112px;
+}
+.product__top {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+.product__title {
+    margin-right: 30px;
+}
+.product-item__info-top {
+    margin-bottom: 25px;
+}
+.product-item__info-title {
+    font-weight: 400;
+    font-style: 24px;
+    line-height: 32px;
+    color: #000;
+    margin-bottom: 10px;
+}
+.product-item__info-desc {
+    font-style: 18px;
+    line-height: 21px;
+}
+.product-item__info-botton {
+    display: flex;
+    align-items: center;
+}
+.product-item__info-btn {
+    background-image: url(../img/cart_white.svg);
+    background-repeat: no-repeat;
+    background-position: right 11px center;
+    margin-right: 60px;
+    padding: 10px 36px 10px 16px;
+    color: #fff;
+    background-color: #1890ff;
+
+}
+.product-item__info-price {
+    font-weight: bold;
+    font-style: 20px;
+    line-height: 32px;
+    color: #000;
 }
