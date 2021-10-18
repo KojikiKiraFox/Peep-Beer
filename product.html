@@ -12,7 +12,7 @@
 	<title>Peep good drink</title>
 </head>
 
-<body id="cart-popup-close">
+<body>
 	<header class="header">
 		<div class="container">
 			<div class="header__inner">
@@ -25,13 +25,14 @@
 				</a>
 				<input class="search input" type="text" placeholder="Адрес доставки">
 				<div class="header__buttons">
-					<a href="#" class="btn__login btn">Войти</a>
-					<a href="#cart-popup" class="btn__cart btn">Корзина</a>
+					<button class="btn__login btn">Войти</button>
+					<button class="btn__cart btn">Корзина</button>
 				</div>
 			</div>
 		</div>
 	</header>
 	<!-- /.header container -->
+
 	<main class="main">
 		<section class="product">
 			<div class="container">
@@ -236,20 +237,16 @@
 	</footer>
 	<!-- /.footer -->
 
-
-
-
-
 	<!-- POPUP -->
-	<div class="cart-popup" id="cart-popup">
+	<div class="cart-popup">
 		<div class="cart-popup__inner">
 			<div class="cart-popup__top">
 				<h3 class="cart-popup__title title">
 					Корзина
 				</h3>
-				<a href="#cart-popup-close" class="cart-popup__close btn">
+				<button class="cart-popup__close btn">
 					<img class="cart-popup__close-img" src="img/close.svg" alt="close">
-				</a>
+				</button>
 			</div>
 			<ul class="cart-popup__items">
 				<li class="cart-popup__item">
@@ -342,15 +339,17 @@
 				<div class="cart-popup__bottom-sum">
 					1250 ₽
 				</div>
-				<a href="#" class="cart-popup__bottom-arrange btn">
+				<button class="cart-popup__bottom-arrange btn">
 					Оформить заказ
-				</a>
-				<a href="#cart-popup-close" class="cart-popup__bottom-cancel btn">
+				</button>
+				<button class="cart-popup__bottom-cancel btn">
 					Отмена
-				</a>
+				</button>
 			</div>
 		</div>
 	</div>
 </body>
+
+<script src="js/script.js"></script>
 
 </html>
