@@ -35,34 +35,35 @@ const getFullPrice = () => {
 	total.textContent = fullPrice
 }
 
+const getNewPrice = (count, price, priceBlock) => {
+	newPrice = count * price
+	priceBlock.textContent = newPrice
+	getFullPrice()
+}
 
 rows.forEach(row => {
 	let newPrice = 0;
 	let priceBlock = row.querySelector('.cart-popup__item-price')
 	let price = +priceBlock.textContent 
 	let countBlock = row.querySelector('.cart-popup__item-number')
-	let count = countBlock.textContent
+	let count = +countBlock.textContent
 	const btnMinus = row.querySelector('.cart-popup__item-minus')
 	const btnPlus = row.querySelector('.cart-popup__item-plus')
 
-	const getNewPrice = (count, price) => {
-		newPrice = count * price
-		priceBlock.textContent = newPrice
-		getFullPrice()
-	}
+
 	
 	btnMinus.addEventListener('click', () => {
 		if (count > 0) {
 			count--
 			countBlock.textContent = count
-			getNewPrice(count, price)
+			getNewPrice(count, price, priceBlock)
 		}
 	})
 
 	btnPlus.addEventListener('click', () => {
 		count++
 		countBlock.textContent = count
-		getNewPrice(count, price)
+		getNewPrice(count, price, priceBlock)
 	})
 	
 })
