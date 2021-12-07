@@ -103,6 +103,33 @@ a:hover{
 .logo__img {
 	width: 100px;
 	height: auto;
+	transition: .3s;
+}
+
+@keyframes logo{
+	25%{
+		transform: rotate(5deg);
+	}
+
+	50%{
+		transform: rotate(-5deg);
+	}
+
+	75%{
+		transform: rotate(5deg);
+	}
+
+	100%{
+		transform: rotate(0);
+	}
+}
+
+.logo__img:hover{
+	animation:logo;
+	animation-duration: 1.2s;
+	animation-fill-mode:forwards;
+	animation-iteration-count:infinite;
+	animation-timing-function:ease-in-out;
 }
 
 .search {
@@ -342,6 +369,34 @@ a:hover{
 .nav__item-link {
 	font-size: 18px;
 	color: #595959;
+	transition: .3s;
+}
+
+@keyframes scale{
+	to{
+		transform: scale(1.1);
+	}
+}
+
+@keyframes rgb{
+	to{
+		filter: hue-rotate(360deg);
+	}
+}
+
+.nav__item-link:hover{
+	text-decoration: underline;
+	animation:rgb;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+
+}
+
+.nav__item-link:active{
+	animation:scale;
+	animation-duration: .3s;
 }
 
 
